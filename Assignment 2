@@ -1,0 +1,27 @@
+class Bulb:
+    def __init__(self, c, h, s, t, w):
+        self.color = c
+        self.height = h
+        self.shape = s
+        self.type = t
+        self.width = w
+        
+    def change_color(self,c):
+        self.color = c
+        
+    def change_color(self,c):
+        self.color = c
+
+    def increase_brigthness(self):
+        self.brightness = self.brightness + 1
+            
+    def decrease_brightness(self):
+        self.brightness = self.brightness - 1
+
+        
+bulb = Bulb("yellow", "110 mm", "Arbitrary","LED","60mm")
+
+
+print ("Default color of bulb:",bulb.color)
+bulb.change_color("pink")
+print ("Modified bulb:",bulb.color)
