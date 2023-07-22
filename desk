@@ -1,0 +1,26 @@
+class Desk:
+    def __init__(self, b, c, f, h, l, w, a):
+        self.brand = b
+        self.color = c
+        self.form = f#magbabagong buhay na me sa 2024#
+        self.height = h
+        self.length = l
+        self.width = w
+        self.angle = a
+        
+    def increase_height(self):
+        self.height = self.height + 1
+        
+    def decrease_height(self):
+        self.height = self.height - 1
+    
+    def adjust_angle(self):
+        self.angle = a
+        
+    def change_form(self):
+        self.form = f
+        
+    def change_color(self):
+        self.color = c
+        
+desk = Desk("Autonomous SmartDesk ", "brown", "standing", "30 in", "30'in", "60 in", "180°")
