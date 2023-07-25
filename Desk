@@ -1,0 +1,58 @@
+class Desk:
+    def __init__(self, b, c, h, l, p, w, t, a):
+     #Attributes variables
+        self.brand = b 
+        self.color = c
+        self.height = h
+        self.position = p
+        self.length = l
+        self.width = w
+        self.type = t
+        self.angle = a
+   
+#List of methods    
+    def adjust_angle(self):
+        self.angle = self.angle + 30
+        
+    def increase_height(self):
+        self.height = self.height + 5
+        
+    def decrease_height(self):
+        self.height = self.height - 5
+        
+    def change_position(self):
+        self.position = p
+        
+    def change_color(self,c):
+        self.color = self.color
+        
+"""
+Unlike the other classes wherein we used the verb "choose" in the
+color attribute, we used the word "change" because tables are
+objects that are easily and commonly painted when one wishes to 
+change its color.
+"""
+    
+#main program 
+desk = Desk("Autonomous SmartDesk", "brown", 30, "sitting position", 30, 60, "electric", 180)
+
+#For changing the desk color
+print("Default color of Desk:",desk.color)
+desk.change_color("yellow")
+print("New color of Desk:",desk.color)
+
+#For adjusting the desk angle:
+print("Default angle:", desk.angle)
+desk.adjust_angle()
+print("Modified set-up:",desk.angle)
+
+#For increasing and decreasing the desk height:
+print("Default height of the desk:", desk.height)
+desk.increase_height()
+print("Modified height of the desk", desk.height)
+
+print("Default height of the desk:", desk.height)
+desk.decrease_height()
+print("Modified height of the desk:", desk.height)
+
+        
