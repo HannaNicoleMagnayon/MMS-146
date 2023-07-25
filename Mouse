@@ -29,7 +29,8 @@ class Mouse:
     of a particular object, but rather choose it among the 
     available choices in the market. 
     """
-  def increase_sensitivity(self):
+    
+    def increase_sensitivity(self):
         self.sensitivity = self.sensitivity + 1
     def decrease_sensitivity(self):
         self.sensitivity = self.sensitivity - 1
@@ -100,7 +101,3 @@ print("After choosing another click direction:", mouse1.click_direction)
 print("Before changing point location:", mouse1.point_location)
 mouse1.point("(20,20)")
 print("After changing point location:", mouse1.point_location)
-
-
-
-
