@@ -1,0 +1,58 @@
+class Chair:
+    def __init__(self,c, h, d, i, e, g, m, t):
+        self.color = c
+        self.height = h
+        self.depth = d
+        self.width = i
+        self.weight = e
+        self.angle = g
+        self.material = m
+        self.type = t
+   
+    #List of Methods     
+    def choose_color(self, c):
+        self.color = c
+    def increase_height(self):
+        self.height = self.height + 7
+    def decrease_height(self):
+        self.height = self.height - 5
+    def adjust_angle(self):
+        self.angle = self.angle - 10
+    def choose_material(self,m):
+        self.material = m
+"""
+The methods before this comment are particularly written 
+using the verb "choose" and not "change" because we thought
+the former seems more logical and appropriate in 
+representing the real object. In the real world, people 
+don't change the attributes like size, type, brand, etc.
+of a particular object, but rather choose it among the 
+available choices in the market. 
+"""
+        
+#main program
+chair = Chair("brown", 43, 26.75, 23, 22, 115, "wood", "Office chair", )
+
+#For choosing a chair color
+print("Before choosing the preferred color:", chair.color)
+chair.choose_color("black")
+print("After modifying the color:", chair.color)
+
+#For increasing and decreasing chair height:
+print("Default height:", chair.height)
+chair.increase_height()
+print("Modified height:", chair.height)
+
+print("Default height:", chair.height)
+chair.decrease_height()
+print("Modified height:", chair.height)
+
+#For adjusting the chair angle:
+print("Before adjusting angle", chair.angle)
+chair.adjust_angle()
+print("After adjusting angle:", chair.angle)
+
+#For choosing what material the chair is made of:
+print("Before choosing different material:", chair.material)
+chair.choose_material("metal")
+print("After choosing different material:", chair.material)
