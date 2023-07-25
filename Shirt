@@ -1,0 +1,95 @@
+class Shirt:
+    def __init__(self, b, c, d, f, s, l, n, w, u):
+        #List of Attributes
+        self.brand = b
+        self.color = c
+        self.collar_type = d
+
+        self.fabric_type = f
+        self.size = s
+        self.cleanliness = l
+        self.wetness = n
+        self.wrinklyness = w
+        self.upkeep_status = u
+    
+    #List of Methods
+    def choose_brand(self,b):
+        self.brand = b
+    def choose_color(self,c):
+        self.color = c
+    def choose_collar_type(self,d):
+        self.collar_type = d
+    def choose_fabric_type(self,f):
+        self.fabric_type = f
+    def choose_size(self,s):
+        self.size = s
+    """
+    The methods before this comment are particularly written 
+    using the verb "choose" and not "change" because we thought
+    the former seems more logical and appropriate in 
+    representing the real object. In the real world, people 
+    don't change the attributes like size, type, brand, etc.
+    of a particular object, but rather choose it among the 
+    available choices in the market. 
+    """   
+    def wash(self):
+        self.cleanliness = "100%"
+    def dry(self):
+        self.wetness = "0%"
+    def iron(self):
+        self.wrinklyness = "0%"
+    def hang(self):
+        self.upkeep_status = "Hanged"
+    def fold(self):
+        self.upkeep_status = "Folded"
+
+shirt1 = Shirt("Banana Republic", "Yellow", "V-neck", "Cotton", "XL", "15%", "60%", "75%", "Unfolded")
+
+#For choosing a different brand:
+print("Before choosing different brand:", shirt1.brand)
+shirt1.choose_brand("Blue Corner")
+print("After choosing different brand:", shirt1.brand)
+
+#For choosing a different shirt color:
+print("Before choosing different color:", shirt1.color)
+shirt1.choose_color("Blue")
+print("After choosing different color:", shirt1.color)
+
+#For choosing a different collar type:
+print("Before choosing different collar type:", shirt1.collar_type)
+shirt1.choose_collar_type("Round-neck")
+print("After choosing different collar type:", shirt1.collar_type)
+
+#For choosing a different fabric type:
+print("Before choosing different fabric type:", shirt1.fabric_type)
+shirt1.choose_fabric_type("Polyester")
+print("After choosing different fabric type:", shirt1.fabric_type)
+
+#For choosing a different shirt size:
+print("Before choosing different size:", shirt1.size)
+shirt1.choose_size("S")
+print("After choosing different size:", shirt1.size)
+
+#For washing the shirt:
+print("Before washing:", shirt1.cleanliness)
+shirt1.wash()
+print("After washing:", shirt1.cleanliness)
+
+#For drying the shirt:
+print("Wetness before drying:", shirt1.wetness)
+shirt1.dry()
+print("Wetness after drying:", shirt1.wetness)
+
+#For ironing the shirt:
+print("Wrinklyness before ironing:", shirt1.wrinklyness)
+shirt1.iron()
+print("Wrinklyness after ironing:", shirt1.wrinklyness)
+
+#For either hanging or folding the shirt:
+print("Upkeep status before hanging:", shirt1.upkeep_status)
+shirt1.hang()
+print("Upkeep status after hanging:", shirt1.upkeep_status)
+
+print("Upkeep status before hanging:", shirt1.upkeep_status)
+shirt1.fold()
+print("Upkeep status after hanging:", shirt1.upkeep_status)
