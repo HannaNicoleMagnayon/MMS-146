@@ -1,0 +1,61 @@
+class Paper:
+    def __init__(self, b, c, f, g, s, t, e):
+    #List of Attributes
+        self.brand = b
+        self.color = c
+        self.form = f
+        self.gsm = g
+        self.size = s
+        self.type = t
+        self.texture = e
+        
+    #List of Methods    
+    def choose_brand(self,b):
+        self.brand = b
+        
+    def change_color(self,c):
+        self.color = c
+        
+    def cut_paper(self):
+        self.form = self.form / 5
+        
+    def paper_fold(self):
+        self.size = self.size / 4
+        
+    def increase_gsm(self):
+        self.gsm = self.gsm + 50
+        
+    def decrease_gsm(self):
+        self.gsm = self.gsm - 30
+        
+    def choose_type(self, t):
+        self.type = t
+        
+        
+#main program
+paper = Paper("International Paper", "green", "whole", 120, "A4", "colored paper", "smooth")
+
+#For choosing a paper brand:
+print("Before choosing a different brand:", paper.brand)
+paper.choose_brand("Arts and Crafts")
+print("After choosing a different brand:", paper.brand)
+
+#For choosing a paper type:
+print("Before choosing a different type:", paper.type)
+paper.choose_type("craft paper")
+print("After choosing a different type:", paper.type)
+
+#For changing the paper color:
+print("Before changing color:", paper.color)
+paper.change_color("violet")
+print("After Modification:",paper.color)
+
+#For increasing and decreasing the gsm
+print("Before increasing gsm:", paper.gsm)
+paper.increase_gsm()
+print(“After increasing gsm:”, paper.gsm)
+
+print("Before decreasing gsm:", paper.gsm)
+paper.decrease_gsm()
+print("After decreasing gsm:", paper.gsm)
+
