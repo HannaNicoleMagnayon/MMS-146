@@ -1,0 +1,53 @@
+class Bulb:
+    def __init__(self, b, c, h, s, t, w, l):
+        self.brightness = b
+        self.color = c
+        self.height = h
+        self.shape = s
+        self.type = t
+        self.width = w
+        self.light_status = l
+
+    def change_color(self,c):
+        self.color = c
+
+    def increase_brightness(self):
+        self.brightness = self.brightness + 1
+            
+    def decrease_brightness(self):
+        self.brightness = self.brightness - 1
+
+    def on(self):
+        self.light_status = "On"
+    
+    def off(self):
+        self.light_status = "Off"
+
+#main program
+bulb = Bulb(2,"yellow", "110 mm", "Arbitrary","LED","60mm", “Off”)
+
+#for changing the color of the bulb
+print ("Before choosing different color:",bulb.color)
+bulb.choose_color("pink")
+print ("After choosing different color:",bulb.color)
+
+#setting for brighter level
+print("Before increasing the brightness level:",bulb.brightness)
+bulb.increase_brightness()
+print("After modifying the brightness level:",bulb.brightness)
+
+#setting for dimmer bulb
+print("Before decreasing the brightness level:",bulb.brightness)
+bulb.decrease_brightness()
+print("After modifying the brightness level:",bulb.brightness)
+
+#code for switching on 
+print("Light status before switching on:",bulb.light_status)
+bulb.on()
+print("Light status after switching:",bulb.light_status)
+
+#code for switching off
+print("Light status before switching off:",bulb.light_status)
+bulb.off()
+print("Light status after switching:",bulb.light_status)
+
