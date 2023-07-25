@@ -1,0 +1,101 @@
+class Bluetooth_Speaker:
+    def __init__(self, c, s, b, w, a, n, v, h, p):
+        #Attribute Variables
+        self.color = c
+        self.size = s
+        self.brand = b
+        self.weight = w
+        self.shape = a
+        self.connection = n
+        self.volume = v
+        self.battery = h
+        self.player_status = p
+
+  #List of Methods
+    def choose_color(self,c):
+        self.color = c
+    def choose_size(self,s):
+        self.size = s
+    def choose_brand(self,b):
+        self.brand = b
+    def choose_weight(self,w):
+        self.weight = w
+    def choose_shape(self,a):
+        self.shape = a
+    """
+    The methods before this comment are particularly written 
+    using the verb "choose" and not "change" because we thought
+    the former seems more logical and appropriate in 
+    representing the real object. In the real world, people 
+    don't change the attributes like size, type, brand, etc.
+    of a particular object, but rather choose it among the 
+    available choices in the market. 
+    """
+    def connect_with_device(self):
+        self.connection = "Connected"
+    def disconnect_with_device(self):
+        self.connection = "Disconnected"
+    def increase_volume(self):
+        self.volume = self.volume + 1
+    def decrease_volume(self):
+        self.volume = self.volume - 1
+    def charge_battery(self):
+        self.battery = self.battery + 1
+    def play_music(self):
+        self.player_status = "Play"
+    def pause_music(self):
+        self.player_status = "Pause"
+
+#Main program
+bluetooth_speaker1 = Bluetooth_Speaker("Blue", "17 cm", "JBL", "1kg", "Cylindrical", "Disconnected", 23, 75, "Pause")
+
+#For choosing color:
+print("Before choosing different color:", bluetooth_speaker1.color)
+bluetooth_speaker1.choose_color("Violet")
+print("After choosing different color:", bluetooth_speaker1.color)
+
+#For choosing a different size:
+print("Before choosing different size:", bluetooth_speaker1.size)
+bluetooth_speaker1.choose_size("10 cm")
+print("After choosing different size:", bluetooth_speaker1.size)
+
+#For choosing a different brand:
+print("Before choosing different brand:", bluetooth_speaker1.brand)
+bluetooth_speaker1.choose_brand("Marshall")
+print("After choosing different brand:", bluetooth_speaker1.brand)
+
+#For choosing a different weight:
+print("Before choosing different weight:", bluetooth_speaker1.weight)
+bluetooth_speaker1.choose_weight("0.7 kg")
+print("After choosing different weight:", bluetooth_speaker1.weight)
+
+#For choosing a different shape:
+print("Before choosing different shape:", bluetooth_speaker1.shape)
+bluetooth_speaker1.choose_shape("Rectangular")
+print("After choosing different shape:", bluetooth_speaker1.shape)
+
+#For connecting and disconnection the speaker with a device:
+print("Before connecting with a device:", bluetooth_speaker1.connection)
+bluetooth_speaker1.connect_with_device()
+print("After connecting with a device:", bluetooth_speaker1.connection)
+
+print("Before disconnecting with a device:", bluetooth_speaker1.connection)
+bluetooth_speaker1.disconnect_with_device()
+print("After disconnection with a device:", bluetooth_speaker1.connection)
+
+#For increasing and decreasing the volume:
+print("Before increasing volume:", bluetooth_speaker1.volume)
+bluetooth_speaker1.increase_volume()
+print("After increasing volume:", bluetooth_speaker1.volume)
+
+print("Before decreasing volume:", bluetooth_speaker1.volume)
+bluetooth_speaker1.decrease_volume()
+print("After decreasing volume:", bluetooth_speaker1.volume)
+
+#For charging the battery:
+print("Before charging battery:", bluetooth_speaker1.battery)
+bluetooth_speaker1.charge_battery()
+print("After charging battery:", bluetooth_speaker1.battery)
+
+
+ 
