@@ -71,3 +71,28 @@ print("After choosing different type:", electric_fan2.type)
 print("Before choosing different weight:", electric_fan1.weight)
 electric_fan1.choose_weight("1.5 kg")
 print("After choosing different weight:", electric_fan1.weight)
+
+
+#For increasing and decreasing speed settings:
+print("Before increasing speed setting:", electric_fan1.speedsetting)
+electric_fan1.increase_speedsetting()
+print("After increasing speed setting:", electric_fan1.speedsetting)
+
+print("Before decreasing speed setting:", electric_fan1.speedsetting)
+electric_fan1.decrease_speedsetting()
+print("After decreasing speed setting:", electric_fan1.speedsetting)
+
+#For enabling and disabling oscillation:
+print("Before enabling oscillation:", electric_fan1.oscillation)
+electric_fan1.enable_oscillation()
+print("After enabling oscillation:", electric_fan1.oscillation)
+
+print("Before disabling oscillation:", electric_fan2.oscillation)
+electric_fan2.disable_oscillation()
+print("After disabling oscillation:", electric_fan1.oscillation)
+
+#For changing wind direction:
+print("Current direction:", electric_fan2.direction)
+electric_fan2.adjust_direction("Left")
+print("New direction:", electric_fan2.direction)
+
