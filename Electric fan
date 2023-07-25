@@ -1,0 +1,73 @@
+class Electric_fan:
+    def __init__(self, b, s, c, t, w, p, o, d):
+        #Attribute Variables
+        self.brand = b
+        self.size = s
+        self.color = c
+        self.type = t
+        self.weight = w
+        #Method Variables
+        self.speedsetting = p
+        self.oscillation = o
+        self.direction = d
+        
+    #List of Methods
+    def choose_brand(self,b):
+        self.brand = b
+    def choose_size(self,s):
+        self.size = s
+    def choose_color(self,c):
+        self.color = c
+    def choose_type(self,t):
+        self.type = t
+    def choose_weight(self,w):
+        self.weight = w  
+        """
+        The methods before this comment are particularly written 
+        using the verb "choose" and not "change" because we thought
+        the former seems more logical and appropriate in 
+        representing the real object. In the real world, people 
+        don't change the attributes like size, type, brand, etc.
+        of a particular object, but rather choose it among the 
+        available choices in the market. 
+        """
+
+    def increase_speedsetting(self):
+        self.speedsetting = self.speedsetting + 1
+    def decrease_speedsetting(self):
+        self.speedsetting = self.speedsetting - 1
+    def enable_oscillation(self):
+        self.oscillation = "On"
+    def disable_oscillation(self):
+        self.oscillation = "Off"
+    def adjust_direction(self,d):
+        self.direction = d
+
+#Main Code    
+electric_fan1 = Electric_fan("Firefly", "15 in", "Green", "Desk fan", "1 kg", 1, "Off", "Left")
+electric_fan2 = Electric_fan("Asahi", "83 in", "Blue", "Stand fan", "5 kg", 3, "On", "Right")
+
+#For  choosing a different brand:
+print("Before choosing different brand:", electric_fan1.brand)
+electric_fan1.choose_brand("Dowell")
+print("After choosing different brand:", electric_fan1.brand)
+
+#For choosing a different size:
+print("Before choosing different size:", electric_fan2.size)
+electric_fan2.choose_size("23 in")
+print("After choosing different size:", electric_fan2.size)
+
+#For choosing a different color
+print("Before choosing different color:", electric_fan1.color)
+electric_fan1.choose_color("White")
+print("After choosing different color:", electric_fan1.color)
+
+#For choosing a different type:
+print("Before choosing different type:", electric_fan2.type)
+electric_fan2.choose_type("Ceiling fan")
+print("After choosing different type:", electric_fan2.type)
+
+#For choosing a different weight:
+print("Before choosing different weight:", electric_fan1.weight)
+electric_fan1.choose_weight("1.5 kg")
+print("After choosing different weight:", electric_fan1.weight)
