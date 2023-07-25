@@ -1,0 +1,106 @@
+class Mouse:
+    def __init__(self,b,c,t,d,n,m,r,k,l):
+        #Attribute Variables
+        self.brand = b
+        self.color = c
+        self.type = t
+        self.sensitivity = d
+        self.connectivity = n
+        self.cursor_movement = m
+        self.scroll_direction = r
+        self.click_direction= k
+        self.point_location = l
+    
+    #List of Methods
+    def choose_brand(self,b):
+        self.brand = b
+    def choose_color(self,c):
+        self.color = c
+    def choose_type(self,t):
+        self.type = t
+    def choose_connectivity(self,n):
+        self.connectivity = n
+    """
+    The methods before this comment are particularly written 
+    using the verb "choose" and not "change" because we thought
+    the former seems more logical and appropriate in 
+    representing the real object. In the real world, people 
+    don't change the attributes like size, type, brand, etc.
+    of a particular object, but rather choose it among the 
+    available choices in the market. 
+    """
+  def increase_sensitivity(self):
+        self.sensitivity = self.sensitivity + 1
+    def decrease_sensitivity(self):
+        self.sensitivity = self.sensitivity - 1
+    def move_cursor(self,m):
+        self.cursor_movement = m
+    def scroll_upward(self):
+        self.scroll_direction = "Upward"
+
+    def scroll_downward(self):
+        self.scroll_direction = "Downward"
+    def right_click(self):
+        self.click_direction = "Right"
+    def left_click(self):
+        self.click_direction = "Left"
+    def point(self,l):
+        self.point_location = l
+
+mouse1 = Mouse("Logitech", "Pink", "Gaming mouse", 200, "Bluetooth", "Still", "Downward", "Neither", "(10,50)")
+
+#For choosing a different brand:
+print("Before choosing different brand:", mouse1.brand)
+mouse1.choose_brand("Corsair")
+print("After choosing different brand:", mouse1.brand)
+
+#For choosing a different color:
+print("Before choosing different color:", mouse1.color)
+mouse1.choose_color("Black")
+print("After choosing different color:", mouse1.color)
+
+#For choosing a different type:
+print("Before choosing different type:", mouse1.type)
+mouse1.choose_type("Magic mouse")
+print("After choosing different type:", mouse1.type)
+
+#For increasing and decreasing sensitivity:
+print("Before increasing sensitivity:", mouse1.sensitivity)
+mouse1.increase_sensitivity()
+print("After increasing sensitivity:", mouse1.sensitivity)
+
+print("Before decreasing sensitivity:", mouse1.sensitivity)
+mouse1.decrease_sensitivity()
+print("After decreasing sensitivity:", mouse1.sensitivity)
+
+#For moving the mouse to move the cursor:
+print("Before moving cursor:", mouse1.cursor_movement)
+mouse1.move_cursor("1 inch to the right")
+print("After moving cursor:", mouse1.cursor_movement)
+
+#For redirecting the scroll direction:
+print("Before redirecting scroll direction:", mouse1.scroll_direction)
+mouse1.scroll_downward()
+print("After redirecting scroll direction:", mouse1.scroll_direction)
+
+print("Before redirecting scroll direction:", mouse1.scroll_direction)
+mouse1.scroll_upward()
+print("After redirecting scroll direction:", mouse1.scroll_direction)
+
+#For choosing a click direction:
+print("Before choosing click direction:", mouse1.click_direction)
+mouse1.right_click()
+print("After choosing click direction:", mouse1.click_direction)
+
+print("Before choosing another click direction:", mouse1.click_direction)
+mouse1.left_click()
+print("After choosing another click direction:", mouse1.click_direction)
+
+#For changing the exact location of the mouse pointer:
+print("Before changing point location:", mouse1.point_location)
+mouse1.point("(20,20)")
+print("After changing point location:", mouse1.point_location)
+
+
+
+
